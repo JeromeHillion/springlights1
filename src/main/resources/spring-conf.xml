@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="fr.jeromegide.tp_springlightV1" />
+
+	<bean class="fr.jeromegide.tp_springlightV1.impl.AmpouleLed" id="led" scope="prototype" />
+	<bean class="fr.jeromegide.tp_springlightV1.impl.AmpouleIncandescente" id="incand" scope="prototype" />
+	<bean class="fr.jeromegide.tp_springlightV1.impl.AmpouleTube" id="tube" scope="prototype" />
+    <bean class="fr.jeromegide.tp_springlightV1.impl.AmpouleTriState" id="tri" scope="prototype"/>
+
+    <bean class="fr.jeromegide.tp_springlightV1.impl.Luminaire" id="luminaire" scope="prototype"/>
+  <!--  <property name="ampoules">
+        <list>
+            <ref bean="tube"/>
+            <ref bean="tube"/>
+            <ref bean="tube"/>
+            <ref bean="tube"/>
+            <ref bean="tube"/>
+            <ref bean="tube"/>
+        </list>
+    </property>-->
+
+</beans>
